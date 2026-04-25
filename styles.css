@@ -1,0 +1,228 @@
+:root {
+  --bg: #1d241f;
+  --bg-alt: #242b25;
+  --text: #f3f3f3;
+  --muted: #d9d9d9;
+  --accent: #3de8ff;
+  --accent-light: #91f7ff;
+  --gold: #c08a2f;
+  --green: #baff7d;
+  --max-width: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top center, rgba(80, 90, 80, 0.18), transparent 38%),
+    linear-gradient(90deg, #171d19 0%, var(--bg-alt) 50%, #171d19 100%);
+  line-height: 1.55;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a { color: inherit; }
+
+.page-shell {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.hero-card,
+.section-card {
+  text-align: center;
+  padding: 2rem 1.25rem;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.9);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 300;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.subtitle,
+.section-intro {
+  max-width: 640px;
+  margin: 1rem auto 1.5rem;
+  color: var(--muted);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  justify-items: center;
+  margin: 1.5rem auto;
+  max-width: 480px;
+}
+
+.brand-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.primary-logo,
+.secondary-logo {
+  width: 190px;
+  object-fit: contain;
+}
+
+.portrait {
+  width: 180px;
+  border: 8px solid #d8d8d8;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.primary-actions,
+.contact-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.button,
+.portal-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  color: #111;
+  background: linear-gradient(180deg, var(--accent-light) 0%, var(--accent) 100%);
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.35),
+    inset 0 2px 8px rgba(255, 255, 255, 0.35);
+}
+
+.button:hover,
+.portal-button:hover {
+  transform: translateY(-1px);
+}
+
+.info-pill {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  padding: 0.65rem 1.2rem;
+  border: 1.5px solid var(--gold);
+  border-radius: 999px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.info-pill strong { color: var(--green); }
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  max-width: 460px;
+  margin: 1.25rem auto 0;
+}
+
+.resource-grid a {
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.portal-card h2 {
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 400;
+}
+
+.portal-card ul {
+  display: inline-block;
+  text-align: left;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+.portal-button {
+  font-size: 1.25rem;
+  min-width: 180px;
+}
+
+.about-card { text-align: left; }
+
+.about-card h2 { text-align: center; }
+
+.jbot-section {
+  margin-top: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.jbot-link {
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.jbot-avatar {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.15);
+}
+
+.site-footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 1.5rem 1rem 0;
+}
+
+@media (max-width: 620px) {
+  .page-shell { padding: 1rem 0.75rem 2rem; }
+
+  .hero-card,
+  .section-card { padding: 1.5rem 0.75rem; }
+
+  .hero-grid { grid-template-columns: 1fr; }
+
+  .primary-actions { flex-direction: column; }
+
+  .button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .portrait { width: 170px; }
+}
