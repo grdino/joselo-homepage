@@ -71,10 +71,33 @@ a {
 
 h1 {
   margin: 0;
-  font-size: clamp(2rem, 6vw, 3.1rem);
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  margin: 0;
+}
+
+.hero-name {
+  display: block;
+  font-size: clamp(2rem, 6vw, 3rem);
   font-weight: 300;
   letter-spacing: 0.07em;
   text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.hero-role {
+  display: block;
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--muted);
+  line-height: 1.2;
 }
 
 h2 {
