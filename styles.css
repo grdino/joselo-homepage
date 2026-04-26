@@ -383,8 +383,8 @@ h2 {
 }
 
 :root {
-  --accent: #6fa7ad;
-  --accent-light: #86bbc0;
+  --accent: #c7d4de;
+  --accent-light: #b8c8d4;
 
   --button-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
   --button-shadow-hover: 0 6px 14px rgba(0, 0, 0, 0.28);
@@ -393,9 +393,9 @@ h2 {
 .button,
 .portal-button,
 .resource-grid a {
-  color: #f3f3f3;
-  background: rgba(111, 167, 173, 0.22);
-  border: 1px solid rgba(134, 187, 192, 0.55);
+  color: #0d3b78;
+  background: var(--accent);
+  border: 1px solid rgba(13, 59, 120, 0.18);
   box-shadow: var(--button-shadow);
   font-weight: 700;
 }
@@ -403,7 +403,7 @@ h2 {
 .button:hover,
 .portal-button:hover,
 .resource-grid a:hover {
-  background: rgba(134, 187, 192, 0.32);
-  border-color: rgba(134, 187, 192, 0.8);
+  background: var(--accent-light);
+  border-color: rgba(13, 59, 120, 0.28);
   box-shadow: var(--button-shadow-hover);
 }
