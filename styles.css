@@ -414,3 +414,47 @@ h2 {
   border-color: rgba(13, 59, 120, 0.28);
   box-shadow: var(--button-shadow-hover);
 }
+
+/* Default: desktop/laptop stays the same */
+.mobile-portrait-wrap,
+.mobile-subtitle {
+  display: none;
+}
+
+.desktop-portrait,
+.desktop-subtitle {
+  display: block;
+}
+
+/* Small devices only */
+@media (max-width: 768px) {
+  /* Show portrait directly under the name */
+  .mobile-portrait-wrap {
+    display: block;
+    margin-top: 0.75rem;
+  }
+
+  .mobile-portrait {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* Hide original subtitle above the grid */
+  .desktop-subtitle {
+    display: none;
+  }
+
+  /* Hide original portrait in the grid */
+  .desktop-portrait {
+    display: none;
+  }
+
+  /* Show subtitle where portrait used to be */
+  .mobile-subtitle {
+    display: block;
+    margin-top: 0;
+  }
+}
